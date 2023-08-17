@@ -76,24 +76,14 @@ nav .nav-item .nav-link:hover {
     color: #FF305B !important;
 }
 
-.nav-controller {
-    display: none;
-    color: white;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    font-size: 28px;
-}
-
-
-@media screen and (max-width:768px) {
+@media (max-width: 767px) {
     .navbar .container {
         padding: 0 !important;
         max-width: 420px !important;
     }
 
     .navbar-nav {
-        text-align: center;
+        text-align: center !important;
         background-color: #333333;
     }
 
@@ -194,7 +184,7 @@ header .landing::before {
     background-color: var(--main-color) !important;
 }
 
-@media screen and (max-width:991px) {
+@media (max-width:991px) {
     .about-pic::before {
         display: none;
     }
@@ -515,7 +505,7 @@ header .landing::before {
     background-color: var(--main-color);
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:767px) {
     .testimonial-box {
         flex-direction: column !important;
     }

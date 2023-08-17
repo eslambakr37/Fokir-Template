@@ -1,3 +1,4 @@
+
 //navbar behavior
 
 let navbar = document.querySelector('nav');
@@ -18,6 +19,16 @@ window.addEventListener('scroll', function () {
     oldscroll = scrollY;
 });
 
+let navSections = document.querySelectorAll('.nav-link');
+
+for (let i = 0; i < navSections.length; i++) {
+    navSections[i].addEventListener('click', function () {
+        for (let j = 0; j < navSections.length; j++) {
+            navSections[j].classList.remove('active');
+        }
+        navSections[i].classList.add('active');
+    });
+}
 
 let shuffleElments = document.querySelectorAll('#portfolio .row-img');
 
@@ -188,12 +199,6 @@ popupVideo.addEventListener('click', function () {
     document.body.style.cssText = "overflow-y: hidden";
 });
 
-//close Link layer in portfolio section
-function closeLink() {
-    lightboxContainer.classList.add('d-none');
-    popupLinkContainer.classList.add('d-none');
-    document.body.style.cssText = "overflow-y: scroll";
-}
 //slider of image layer
 function imageSlider(i) {
     imageCurrentIndex = imageCurrentIndex + i;
@@ -214,16 +219,18 @@ prevButton.addEventListener('click', function () {
 });
 
 //close image layer in portfolio section
-function closeImage() {
+function close() {
     lightboxContainer.classList.add('d-none');
     popupImageContainer.classList.add('d-none');
+    popupLinkContainer.classList.add('d-none');
     popupVideoContainer.classList.add('d-none');
+    popupVideoFrame.removeAttribute('src');
     document.body.style.cssText = "overflow-y: scroll";
 }
 
 
 for (let i = 0; i < closeButton.length; i++) {
-    closeButton[i].addEventListener('click', closeImage);
+    closeButton[i].addEventListener('click', close);
 }
 
 document.addEventListener('keydown', function (e) {
@@ -234,8 +241,8 @@ document.addEventListener('keydown', function (e) {
         imageSlider(-1);
     }
     else if (e.key == 'Escape') {
-        closeImage();
-        closeLink();
+        close();
+        close();
     }
 
 })
@@ -338,4 +345,5 @@ mainButton.addEventListener('click', function () {
     messageEmail.value = "";
     messageSubject.value = "";
     message.value = "";
+    mainButton.disabled = true;
 })
