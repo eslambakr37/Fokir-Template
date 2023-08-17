@@ -75,6 +75,18 @@ nav .nav-item .nav-link {
 nav .nav-item .nav-link:hover {
     color: #FF305B !important;
 }
+@media (max-width: 991px) {
+    .navbar .container {
+        padding: 0 !important;
+        max-width: 640px !important;
+    }
+
+    .navbar-nav {
+        text-align: center !important;
+        background-color: #333333;
+    }
+
+}
 
 @media (max-width: 767px) {
     .navbar .container {
