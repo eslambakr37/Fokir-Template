@@ -20,6 +20,7 @@ window.addEventListener('scroll', function () {
 });
 
 let navSections = document.querySelectorAll('.nav-link');
+let navMenu = document.querySelector('.navbar-collapse');
 
 for (let i = 0; i < navSections.length; i++) {
     navSections[i].addEventListener('click', function () {
@@ -27,6 +28,7 @@ for (let i = 0; i < navSections.length; i++) {
             navSections[j].classList.remove('active');
         }
         navSections[i].classList.add('active');
+        navMenu.classList.remove('show');
     });
 }
 
