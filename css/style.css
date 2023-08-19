@@ -318,6 +318,7 @@ header .landing::before {
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 6px;
     width: 600px;
+    max-width: 95%;
     margin: 30px auto;
 
 }
@@ -404,8 +405,8 @@ header .landing::before {
 }
 
 .popup-video .video-holder {
-    width: 100%;
-    max-width: 900px;
+    max-width: 95%;
+    width: 900px;
 }
 
 .popup-video i {
@@ -419,9 +420,7 @@ header .landing::before {
 
 .popup-video iframe {
     display: block;
-    top: 0;
     width: 100%;
-    height: 80%;
     background: #000;
 }
 
