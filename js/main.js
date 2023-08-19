@@ -321,7 +321,7 @@ function subjectValidation() {
     }
 }
 function messageValidation() {
-    let regex = /^([a-z]{2,15}\s){5,}[a-z]{2,15}$/gm;
+    let regex = /^([a-z]{2,15}\s){5,30}[a-z]{2,15}$/gm;
     if (regex.test(message.value)) {
         messageContainer.classList.add('d-none');
         messageValidationState = true;
