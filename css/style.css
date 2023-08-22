@@ -241,6 +241,9 @@ header .landing::before {
 #portfolio .row li:hover {
     color: #FF305B !important;
 }
+.shuffle{
+    max-width: 450px;
+}
 
 .portfolio-img::before {
     content: '';
